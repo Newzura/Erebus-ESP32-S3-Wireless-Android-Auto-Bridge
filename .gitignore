@@ -6,10 +6,31 @@ venv/
 __pycache__/
 .mypy_cache/
 .pytest_cache/
+.julia/
+zig*/
+
+# Build artifacts
 dist/
 build/
 target/
-.gradle/
+*.o
+*.obj
+*.out
+*.exe
+*.dll
+*.so
+*.a
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+*.env.*
 
 # Editors
 .vscode/
@@ -19,25 +40,13 @@ target/
 .DS_Store
 Thumbs.db
 
-# Environment
-.env
-.env.local
-*.env.*
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-# Logs and temp files
-*.log
-*.tmp
-
-# Compiled files
-*.pyc
-*.class
-*.o
-*.exe
-*.dll
-*.so
-*.a
-*.obj
-*.out
+# Gradle
+.gradle/
 
 # Compressed files
 *.zip

@@ -1,0 +1,23 @@
+idf_component_register(
+    SRCS
+        "app_main.cpp"
+        "bridge_state.cpp"
+        "diagnostics.cpp"
+        "wifi_transport.cpp"
+        "usb_otg_transport.cpp"
+        "protocol_router.cpp"
+    INCLUDE_DIRS "."
+    REQUIRES
+        esp_timer
+        esp_wifi
+        esp_event
+        nvs_flash
+        lwip
+        spi_flash
+        esp_partition
+        esp_system
+        driver
+        esp_psram
+        app_update
+        esp_netif
+)

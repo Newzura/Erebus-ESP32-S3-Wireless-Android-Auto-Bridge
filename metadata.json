@@ -1,0 +1,6 @@
+{
+  "name": "Erebus",
+  "description": "ESP32-S3 Wireless Android Auto Bridge - Monorepo Firmware & Companion App",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

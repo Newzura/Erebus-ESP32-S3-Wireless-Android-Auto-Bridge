@@ -1,0 +1,4 @@
+## Template for Android local.properties
+## Copy this file to local.properties and set your local SDK location.
+## This file must NOT be committed to version control.
+sdk.dir=/Users/YOUR_USER/Library/Android/sdk

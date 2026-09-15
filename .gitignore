@@ -1,40 +1,37 @@
 ```
 # Build artifacts
-*.o
-*.obj
-*.elf
-*.bin
-*.hex
-*.map
-*.lst
+build/
+dist/
 
 # Dependencies
-.pio/
-.platformio/
 node_modules/
 venv/
 .venv/
 __pycache__/
-*.egg-info/
+.mypy_cache/
+.pytest_cache/
 
-# Logs and temporary files
-*.log
-*.tmp
+# IDE files
+.vscode/
+.idea/
 *.swp
 *.swo
+*.tmp
+
+# Logs
+*.log
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# Editors
-.vscode/
-.idea/
-*.swp
-*.swo
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-# PlatformIO specific
-.piolibdeps/
-.sconsign.dblite
+# OS files
+.DS_Store
+Thumbs.db
 ```

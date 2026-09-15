@@ -34,6 +34,7 @@ DHU / autoradio Android Auto
 
 ## Derniers commits
 
+- fix: remove cloud services and restore standard debug signing
 - chore: consolidate android project under android-app
 - 525baf6 build: add reproducible local android debug apk
 - 07d16a0 feat: bind android local transport to erebus wifi network

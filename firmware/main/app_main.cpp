@@ -14,6 +14,13 @@
 
 static const char* TAG = "MAIN";
 
+static void router_task(void* pvParameters) {
+    while (1) {
+        protocol_router_process();
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+}
+
 static void diagnostics_task(void* pvParameters) {
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(10000));
@@ -55,10 +62,16 @@ extern "C" void app_main(void) {
         ESP_LOGE(TAG, "Failed to initialize Wi-Fi transport: %s", esp_err_to_name(wifi_err));
     }
     usb_otg_transport_init();
-    protocol_router_init();
+    
+    // Initialize TCP server (port 5288)
+    esp_err_t router_err = protocol_router_init();
+    if (router_err != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to initialize protocol router: %s", esp_err_to_name(router_err));
+    }
 
-    // 5. Start Background Diagnostic Monitor Task
+    // 5. Start Background Tasks
     xTaskCreatePinnedToCore(diagnostics_task, "diag_mon", 3072, NULL, 1, NULL, 0);
+    xTaskCreatePinnedToCore(router_task, "router", 4096 * 2, NULL, 5, NULL, 1);
 
-    ESP_LOGI(TAG, "Erebus ESP32-S3 N16R8 base firmware started successfully.");
+    ESP_LOGI(TAG, "Erebus ESP32-S3 N16R8 firmware started. TCP server on port %d.", EREBUS_TRANSPORT_PORT);
 }

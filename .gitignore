@@ -1,39 +1,65 @@
-# Build outputs
-*.iml
-.gradle
-.kotlin
-/build
-/app/build
-/android-app/build
-/android-app/app/build
-.externalNativeBuild
-.cxx
-/captures
-.build-outputs/
+```
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+target/
+.gradle/
 
-# IDE files
+# Editors
+.vscode/
 .idea/
+
+# System files
 .DS_Store
+Thumbs.db
 
-# Secrets and local configurations
-# NOTE: firmware/main/secrets.h is temporarily versioned for prototype testing
-# firmware/main/secrets.h
-firmware/sdkconfig
-firmware/sdkconfig.old
-firmware/build/
-android-app/local.properties
-android-app/secrets.properties
-local.properties
+# Environment
 .env
-*.keystore
-*.jks
-debug.keystore.base64
-*.base64
+.env.local
+*.env.*
 
-# Local test outputs, captures and logs
-logs/
+# Logs and temp files
 *.log
-captures/
-*.pcap
-*.pcapng
+*.tmp
 
+# Compiled files
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
+*.out
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```

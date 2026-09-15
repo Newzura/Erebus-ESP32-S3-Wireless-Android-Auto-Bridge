@@ -22,18 +22,27 @@ DHU / autoradio Android Auto
 | Élément | État | Preuve |
 |---|---|---|
 | Build ESP32-S3 | Compilé | idf.py build |
+| Build Android local | Reproductible | cd android-app && ./gradlew assembleDebug |
 | Flash 16 Mo | Configuré, non testé matériellement | sdkconfig.defaults |
 | PSRAM 8 Mo OPI | Configurée, non testée matériellement | sdkconfig.defaults |
 | UART | Implémenté, non testé matériellement | diagnostics.cpp |
-| Wi‑Fi Erebus | Implémenté, non testé matériellement | commit e564500 |
-| Transport TCP 5288 | Non commencé | — |
+| Wi‑Fi Erebus | SoftAP permanent, diag déconnexion, canal 6 | commit 71d4b6b |
+| Transport TCP 5288 (Android) | Socket bindé Network sans bindProcessToNetwork | MainActivity / ErebusNetworkManager |
 | USB OTG | Non commencé | — |
 | AOA | Non commencé | — |
 | Android Auto réel | Non commencé | — |
 
-## Dernier commit
+## Derniers commits
 
-- 7521376 docs: add official erebus technical tracking journal
+- build: add reproducible local android debug apk
+- 07d16a0 feat: bind android local transport to erebus wifi network
+- 71d4b6b fix: improve erebus softap stability and disconnect diagnostics
+- 465bd24 chore: version prototype wifi credentials for local testing
+- 9f9742c chore: consolidate project tracking into project status
+
+## Configuration des secrets (Dérogation prototype)
+
+- `firmware/main/secrets.h` est temporairement versionné avec un mot de passe de démonstration non sensible (`changeme`) ; à retirer de Git avant toute utilisation réelle ou publication.
 
 ## Prochaine action unique
 

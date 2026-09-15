@@ -18,7 +18,9 @@
 #define EREBUS_DEFAULT_GATEWAY_IP   "192.168.4.1"
 #define EREBUS_DEFAULT_NETMASK      "255.255.255.0"
 #define EREBUS_WIFI_CHANNEL         6
-#define EREBUS_MAX_STA_CONN         4
+#define EREBUS_MAX_STA_CONN         1   // Limited to 1 during OnePlus test phase
+#define EREBUS_WIFI_BEACON_INTERVAL 100 // 100 TU standard beacon interval
+#define EREBUS_WIFI_SSID_HIDDEN     0   // Broadcast SSID visible
 
 // Static Buffer Sizing (avoid dynamic allocations in hot loops)
 #define EREBUS_RX_BUFFER_SIZE       (32 * 1024)   // 32 KB

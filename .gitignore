@@ -4,6 +4,7 @@
 .kotlin
 /build
 /app/build
+/android-app/build
 /android-app/app/build
 .externalNativeBuild
 .cxx
@@ -15,7 +16,8 @@
 .DS_Store
 
 # Secrets and local configurations
-firmware/main/secrets.h
+# NOTE: firmware/main/secrets.h is temporarily versioned for prototype testing
+# firmware/main/secrets.h
 firmware/sdkconfig
 firmware/sdkconfig.old
 firmware/build/

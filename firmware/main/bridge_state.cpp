@@ -34,7 +34,9 @@ const char* BridgeStateMachine::getStateName(BridgeState state) const {
         case BridgeState::WIFI_AP_READY: return "WIFI_AP_READY";
         case BridgeState::PHONE_CONNECTING: return "PHONE_CONNECTING";
         case BridgeState::PHONE_CONNECTED: return "PHONE_CONNECTED";
-        case BridgeState::NETWORK_TRANSPORT_READY: return "NETWORK_TRANSPORT_READY";
+        case BridgeState::LOCAL_NETWORK_READY: return "LOCAL_NETWORK_READY";
+        case BridgeState::LOCAL_TRANSPORT_CONNECTED: return "LOCAL_TRANSPORT_CONNECTED";
+        case BridgeState::NETWORK_TRANSPORT_READY: return "LOCAL_NETWORK_READY";
         case BridgeState::USB_WAITING: return "USB_WAITING";
         case BridgeState::USB_INITIALIZING: return "USB_INITIALIZING";
         case BridgeState::USB_ENUMERATING: return "USB_ENUMERATING";

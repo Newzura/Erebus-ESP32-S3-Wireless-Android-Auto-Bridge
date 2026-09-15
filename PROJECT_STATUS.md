@@ -34,7 +34,8 @@ DHU / autoradio Android Auto
 
 ## Derniers commits
 
-- build: add reproducible local android debug apk
+- chore: consolidate android project under android-app
+- 525baf6 build: add reproducible local android debug apk
 - 07d16a0 feat: bind android local transport to erebus wifi network
 - 71d4b6b fix: improve erebus softap stability and disconnect diagnostics
 - 465bd24 chore: version prototype wifi credentials for local testing

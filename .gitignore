@@ -1,25 +1,25 @@
 ```
-# Dependencies
-node_modules/
-venv/
-.venv/
+# Compiled and build artifacts
+*.pyc
 __pycache__/
-.mypy_cache/
-.pytest_cache/
-.julia/
-zig*/
-
-# Build artifacts
-dist/
-build/
-target/
 *.o
 *.obj
-*.out
 *.exe
 *.dll
 *.so
 *.a
+*.out
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+target/
+.gradle/
 
 # Logs and temp files
 *.log
@@ -45,9 +45,6 @@ coverage/
 htmlcov/
 .coverage
 
-# Gradle
-.gradle/
-
 # Compressed files
 *.zip
 *.gz
@@ -67,8 +64,4 @@ htmlcov/
 *.Z
 *.lz
 *.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
 ```
